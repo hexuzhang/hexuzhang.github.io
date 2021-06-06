@@ -1,17 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<!--meta 单标签 用来引入或声明一些内容-->
-<meta charset="UTF-8">
-<!--title 标题标签-->
-<title>张贺旭的个人主页</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
-body{
-     margin: 8;
- 
-}
+body {margin: 0;}
+
 h2 {font-family:仿宋;}
-/*p {color:blue;}*/
+
 /* 未被访问的链接 */
 a:link {
   text-decoration: none;
@@ -31,66 +26,48 @@ a:hover {
 a:active {
   color: green;
 }
-#ul{
-            float: right;
-            margin: 0;
-            /*右内边距设为零*/
-            padding-right:100px;
+
+ul.topnav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: rgb(37,80,107);
 }
-#li{
-  float: left;
-  /*设置列表项的前缀为none*/
-  list-style: none;
-  margin-right: 30px;
-  /*去除超链接下划线*/
-  text-decoration: none;
+
+ul.topnav li {float: left;}
+
+ul.topnav li a {
+  display: block;
   color: white;
+  text-align: center;
+  padding: 35px 40px;
+  text-decoration: none;
 }
-#header {
-    background-color:rgb(37,80,107);
-    color:white;
-    font-size: 20px;
-    /*text-align:center;*/
-    /*float:right;*/
-    padding:20px;
+
+ul.topnav li a:hover:not(.active) {background-color: #111;}
+
+ul.topnav li a.active {background-color: #4CAF50;}
+
+ul.topnav li.right {float: right;}
+
+@media screen and (max-width: 600px) {
+  ul.topnav li.right, 
+  ul.topnav li {float: none;}
 }
-#nav {
-    line-height:93px;
-    background-color:#eeeeee;
-    height:93px;
-    width:269px;
-    float:left;
-    padding:5px;	      
-}
-#footer {
-    background-color:red;
-    color:white;
-    clear:both;
-    text-align:center;
-    padding:5px;	 	 
-}
-#logo{
-    width: 100px;
-    /*要让图片居中对齐*/
-    margin: auto;
-}
-    </style>
+</style>
 </head>
-
-
 <body>
 
-<div id="header">
-<img id="logo" src="/Image/galaxy.jpg" width="100" height="80" />
-<ul id="ul">
-<li id="li">&nbsp</li><br>
-<li id="li">主页 |</li>
-<li id="li">视频资源 |</li>
-<li id="li">软件学习 |</li>
-<li id="li">重要文件 |</li>
-<li id="li">个人生活</li>
+<ul class="topnav">
+  <li><a class="active" href="#home">主页</a></li>
+  <li><a href="#news">视频资源</a></li>
+  <li><a href="#contact">软件学习</a></li>
+  <li><a href="#contact">重要文件</a></li>
+  <li><a href="#contact">个人生活</a></li>
 </ul>
-</div>
+
+<div style="padding:0 16px;">
 
 <section>
 <h2>张贺旭</h2>
@@ -153,6 +130,8 @@ a:active {
 <li><a href="https://www.connectedpapers.com/">Connected Papers——Explore connected papers in a visual graph</a></li>
 </ul>
 </section>     
-     
+</div>
+</body>
+</html>
 </body>
 </html>
